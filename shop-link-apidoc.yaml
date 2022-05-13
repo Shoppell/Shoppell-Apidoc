@@ -36,8 +36,7 @@ servers:
 tags:
   - name: user
   - name: shop
-  - name: product
-  - name: category
+
 
 paths:
 
@@ -280,7 +279,7 @@ paths:
   "/product/create":
     post:
       tags:
-        - product
+        - shop
       summary: create a product
       requestBody:
         required: True
@@ -327,7 +326,7 @@ paths:
             type: string
     get:
       tags:
-        - product
+        - shop
       summary: find a product by id
 
       responses:
@@ -359,7 +358,7 @@ paths:
                 $ref: "errors.yaml#/components/schemas/E_ADMISSION_NOT_FOUND"
     put:
       tags:
-        - product
+        - shop
       summary: update a product
       requestBody:
         required: true
@@ -398,7 +397,7 @@ paths:
                 $ref: "errors.yaml#/components/schemas/E_ADMISSION_NOT_FOUND"
     delete:
       tags:
-        - product
+        - shop
       summary: delete a product
 
       responses:
@@ -429,7 +428,7 @@ paths:
   "/product/list":
     get:
       tags:
-        - product
+        - shop
       summary: list products
   
       responses:
@@ -465,7 +464,7 @@ paths:
   "/category/create":
     post:
       tags:
-        - category
+        - shop
       summary: create a category
       requestBody:
         required: True
@@ -511,7 +510,7 @@ paths:
             type: integer
     get:
       tags:
-        - category
+        - shop
       summary: find a category by id
 
       responses:
@@ -543,7 +542,7 @@ paths:
                 $ref: "errors.yaml#/components/schemas/E_ADMISSION_NOT_FOUND"
     put:
       tags:
-        - category
+        - shop
       summary: update a category
       requestBody:
         required: true
@@ -582,7 +581,7 @@ paths:
                 $ref: "errors.yaml#/components/schemas/E_ADMISSION_NOT_FOUND"
     delete:
       tags:
-        - category
+        - shop
       summary: delete a category
 
       responses:
@@ -612,7 +611,7 @@ paths:
   "/category/list":
     get:
       tags:
-        - category
+        - shop
       summary: list categories
   
       responses:
